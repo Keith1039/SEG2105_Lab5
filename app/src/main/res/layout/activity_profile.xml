@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="411dp"
+        android:layout_height="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_ca"
+            android:contentDescription="PNG of a Canadian Flag" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_eg"
+            android:contentDescription="PNG of an English flag" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_fr"
+            android:contentDescription="PNG of a French flag" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="411dp"
+        android:layout_height="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_jp"
+            android:contentDescription="PNG of a Japanese flag" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_kr"
+            android:contentDescription="PNG of a Korean flag" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_sp"
+            android:contentDescription="PNG of a Spanish flag" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="411dp"
+        android:layout_height="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow3">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_tr"
+            android:contentDescription="PNG of a " />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_uk"
+            android:contentDescription="PNG of a United Kingdom flag" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flag_us"
+            android:contentDescription="PNG of a United States flag" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a New Avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow4"
+        app:layout_constraintVertical_bias="0.137" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
