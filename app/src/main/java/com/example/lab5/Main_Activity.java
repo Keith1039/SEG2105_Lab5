@@ -43,10 +43,7 @@ public class Main_Activity extends AppCompatActivity {
         startActivity(mapIntent);
 
     }
-    public void OnSetAvatarButton(View view){
-        Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
-        profileActivityResultLauncher.launch(intent);
-    }
+
     ActivityResultLauncher<Intent> profileActivityResultLauncher =registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>(){
@@ -55,16 +52,51 @@ public class Main_Activity extends AppCompatActivity {
                     if(result.getResultCode() == Activity.RESULT_OK){
                         // There are no request codes
                         Intent data = result.getData();
-                        //Switch(data.getIntExtra("imageID", R.id.imageView2)){
-                            //case R.id.imageView2:
-                                //drawableName = "Canadian flag";
-                                //break;
-
-                        //}
+                        ImageView avatarImage = (ImageView) findViewById(R.id.AvatarImage);
+                        String drawableName = "flag_ca";
+                        switch (data.getIntExtra("imageID", R.id.imageView)){
+                            case R.id.imageView:
+                                drawableName = "flag_ca";
+                                break;
+                            case R.id.imageView2:
+                                drawableName = "flag_eg";
+                                break;
+                            case R.id.imageView3:
+                                drawableName = "flag_fr";
+                                break;
+                            case R.id.imageView4:
+                                drawableName = "flag_jp";
+                                break;
+                            case R.id.imageView5:
+                                drawableName = "flag_kr";
+                                break;
+                            case R.id.imageView6:
+                                drawableName = "flag_sp";
+                                break;
+                            case R.id.imageView7:
+                                drawableName = "flag_tr";
+                                break;
+                            case R.id.imageView8:
+                                drawableName = "flag_uk";
+                                break;
+                            case R.id.imageView9:
+                                drawableName = "flag_us";
+                                break;
+                            default:
+                                drawableName = "flag_ca";
+                                break;
+                        }
+                        int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
+                        avatarImage.setImageResource(resID);
                     }
                 }
             }
     );
+    public void OnSetAvatarButton(View view){
+        Intent intent = new Intent(getApplicationContext(),ProfileActivity.class);
+        profileActivityResultLauncher.launch(intent);
+    }
+
 
 }
 
